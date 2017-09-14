@@ -1,7 +1,6 @@
+const authcontroller = require('./controllers/authcontroller')
+
 module.exports = function (app) {
-  app.post('/register', function(req, res) {
-    res.send({
-      message: `Hello ${req.body.email}`
-    })
-  })
+  app.post('/register',
+  authcontroller.register)
 }
