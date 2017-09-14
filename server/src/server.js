@@ -8,8 +8,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', function(req, res) {
-  res.send('Hello');
-});
+app.post('/register', function(req, res) {
+  res.send({
+    message: `Hello ${req.body.email}`
+  })
+})
 
 app.listen(process.env.PORT || 3000);
