@@ -22,12 +22,6 @@ require('./routes')(app)
 //   });
 // });
 
-app.get('/users', function(req, res) {
-  models.User.findAll({}).then(function(users) {
-    res.json(users);
-  });
-});
-
 // app.get('/todos', function(req, res) {
 //   models.Todo.findAll({}).then(function(todos) {
 //     res.json(todos);
